@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.centered-box {
+    width: 100vw;
+    /* background-color: bisque; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game-title {
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    display: grid;
+    position: relative;
+    width: 800px;
+    height: 800px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* background-color: aqua; */
+    margin: 10px auto 0 auto;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+#angel {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#level {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.btn {
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.green {
+    background-color: rgb(1, 228, 1);
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.button-to-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 170px;
+    border: 5px solid black;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.animate-button {
+    background-color: rgb(255, 102, 247);
+    border-color: white;
+}
+
+.game-over {
+    background: red;
+    opacity: 0.8;
+}
+
+.pressed {
+    background-color: rgb(182, 182, 182);
+    box-shadow: 0 0 10px white;
+}
+
+@media (max-width: 952px) {
+    .centered-box {
+        width: 100vw;
+    }
+    
+    #game-title {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+    
+    .container {
+        width: 500px;
+        height: 500px;
+        margin: 10px auto 0 auto;
+        gap: 20px;
+    }
+        
+    .button-to-play {
+        height: 120px;
+        width: 120px;
+        border-width: 5px;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+}
+
+@media (max-width: 506px) {
+    .centered-box {
+        width: 100vw;
+    }
+    
+    #game-title {
+        font-size: 30px;
+        padding-bottom: 5px;
+    }
+    
+    .container {
+        width: 300px;
+        height: 300px;
+        margin: 10px auto 0 auto;
+        gap: 20px;
+    }
+        
+    .button-to-play {
+        height: 80px;
+        width: 80px;
+        border-width: 5px;
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+}
