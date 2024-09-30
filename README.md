@@ -1,1 +1,1 @@
-# SimonGameForAngel
+# SimonGame
